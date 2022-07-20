@@ -26,32 +26,40 @@
                                                 <thead>
                                                     <tr>
                                                         <th>
-                                                            Date
-                                                        </th>
-                                                        
-                                                        <th>
-                                                            Staffer
+                                                            <h6> Employee Id</h6>
                                                         </th>
                                                         <th>
-                                                            Status
+                                                            <h6>Employee Name</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Present</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Absent</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>WFH</h6>
+                                                        </th>
+                                                        <th>
+                                                            <h6>Client</h6>
                                                         </th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="py-1">
-                                                            {{today}}
-                                                        </td>
-                                                        
-                                                        <td>
-                                                           {{form.staff}}
-                                                        </td>
-                                                        <td>
-                                                            {{form.status}}
-                                                        </td>
-                                                        
-                                                    </tr>
-                                                </tbody>
+             <tbody>
+                    {% for worker in workers %}
+						
+                          <td class="font-weight-medium">
+                            <img src="{{worker.thumb.url}}" class='img-fluid rounded-circle' alt="">
+                          </td>
+                          <td>
+                            {{worker.emp_id}}
+                          </td>
+                          <td>
+                            {{worker.emp_name}}
+                          </td>
+						  
+                    {% endfor %}
+              </tbody>
                                             </table>
                                         </div>
 
